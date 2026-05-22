@@ -161,6 +161,37 @@
         line-height: 1.6;
       }
 
+      .highlights {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--line);
+      }
+
+      .highlight {
+        min-height: 148px;
+        padding: 24px;
+        background: rgba(255, 250, 240, 0.72);
+      }
+
+      .highlight b {
+        display: block;
+        margin-bottom: 12px;
+        color: var(--accent-strong);
+        font-family: "Noto Sans SC", "PingFang SC", sans-serif;
+        font-size: 0.95rem;
+      }
+
+      .highlight p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.68;
+      }
+
       footer {
         grid-column: 1 / -1;
         border-top: 1px solid var(--line);
@@ -193,6 +224,10 @@
         .secondary-action {
           width: 100%;
         }
+
+        .highlights {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -219,6 +254,21 @@
           <strong>今日重点</strong>
           <span>少一点复杂配置，多一点清晰表达。把核心内容放在第一屏，让访问者快速理解页面用途。</span>
         </div>
+      </section>
+
+      <section class="highlights" aria-label="页面亮点">
+        <article class="highlight">
+          <b>打开即用</b>
+          <p>所有样式和视觉元素都写在单个文件中，不依赖构建工具或外部资源。</p>
+        </article>
+        <article class="highlight">
+          <b>响应式布局</b>
+          <p>桌面端双栏展示，移动端自动收拢成单列，核心信息保持清晰。</p>
+        </article>
+        <article class="highlight">
+          <b>基础可访问性</b>
+          <p>页面包含语义结构、图片替代文本和键盘焦点样式，便于继续扩展。</p>
+        </article>
       </section>
 
       <footer>页面由单个 HTML 文件构成，可直接用于静态站点或本地预览。</footer>
