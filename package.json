@@ -1,0 +1,16 @@
+{
+  "name": "symphony-med-5",
+  "version": "1.0.0",
+  "description": "Simple Express.js HTTP server for MED-5.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "supertest": "^7.1.4"
+  }
+}
