@@ -12,6 +12,7 @@ const checks = [
   ["页面应包含行动按钮或链接", /class=["'][^"']*\bprimary-action\b[^"']*["']/i],
   ["页面应包含亮点内容区域", /class=["'][^"']*\bhighlights\b[^"']*["']/i],
   ["页面应包含键盘焦点样式", /:focus-visible/i],
+  ["页面应尊重减少动态效果偏好", /prefers-reduced-motion/i],
   ["页面应包含页脚信息", /<footer[\s>][\s\S]*?<\/footer>/i],
 ];
 

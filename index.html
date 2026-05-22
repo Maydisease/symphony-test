@@ -229,6 +229,17 @@
           grid-template-columns: 1fr;
         }
       }
+
+      @media (prefers-reduced-motion: reduce) {
+        .primary-action,
+        .secondary-action {
+          transition: none;
+        }
+
+        .primary-action:hover {
+          transform: none;
+        }
+      }
     </style>
   </head>
   <body>
