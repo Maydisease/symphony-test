@@ -37,6 +37,26 @@
           var(--paper);
       }
 
+      .skip-link {
+        position: fixed;
+        top: 14px;
+        left: 14px;
+        z-index: 10;
+        padding: 10px 14px;
+        border-radius: 6px;
+        color: #ffffff;
+        font-family: "Noto Sans SC", "PingFang SC", sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+        background: var(--accent-strong);
+        transform: translateY(-150%);
+        transition: transform 180ms ease;
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
       main {
         width: min(1120px, calc(100% - 32px));
         min-height: 100vh;
@@ -231,6 +251,7 @@
       }
 
       @media (prefers-reduced-motion: reduce) {
+        .skip-link,
         .primary-action,
         .secondary-action {
           transition: none;
@@ -243,7 +264,8 @@
     </style>
   </head>
   <body>
-    <main>
+    <a class="skip-link" href="#main-content">跳转到主内容</a>
+    <main id="main-content" tabindex="-1">
       <section aria-labelledby="page-title">
         <p class="eyebrow">简单、清爽、可直接打开</p>
         <h1 id="page-title">把今天整理得更有条理。</h1>
