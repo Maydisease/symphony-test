@@ -1,7 +1,7 @@
 {
   "name": "symphony-med-5",
   "version": "1.0.0",
-  "description": "Simple Express.js HTTP server for MED-5.",
+  "description": "MED-5 的简单 Express.js HTTP 服务器。",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
